@@ -7,24 +7,24 @@ const CURRENT_VERSION = "0.5";
 
 const API_URL = "api.php?a=";
 
-const THRESHOLD_IN_FOCUS = 1;
-const THRESHOLD_OUT_FOCUS = 3;
+const THRESHOLD_IN_FOCUS    = 1;
+const THRESHOLD_OUT_FOCUS   = 3;
 const THRESHOLD_NOT_VISIBLE = 30;
-const DEFAULT_TIMEOUT = 60;
+const DEFAULT_TIMEOUT       = 60;
 
-let state = "name";
-let counter = 10;
-let inFocus = true;
+let state     = "name";
+let counter   = 10;
+let inFocus   = true;
 let threshold = 1;
 const select = document.getElementById("poker-select");
 const review = document.getElementById("poker-review");
 const result = document.getElementById("poker-result");
-const reset = document.getElementById("reset");
+const reset  = document.getElementById("reset");
 const reveal = document.getElementById("reveal");
 const nameEl = document.getElementById("name");
-const countdownEl = document.getElementById("countdown");
+const countdownEl  = document.getElementById("countdown");
 let timerCountdown = null;
-let timeOutSelect = false;
+let timeOutSelect  = false;
 
 /**
  * Fetch from API server.
@@ -50,7 +50,6 @@ function getParameterByName (name)
 {
     return new URLSearchParams(window.location.search).get(name);
 }
-
 
 /**
  * Generate a countdown display.
