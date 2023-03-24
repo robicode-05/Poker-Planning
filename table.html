@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Poker Planning</title>
+    <link rel="author" href="https://github.com/Passific/Poker-Planning"/>
+    <meta name="description" content="Poker-Planning">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+<body>
+<div id="poker-select">
+    <div class="poker-card poker-card-select" id="card-1" data-id="1" data-value="0">
+        <div class="poker-card-inner">
+            <div class="poker-card-front"><img src="0.png" alt="0"></div>
+            <div class="poker-card-back"><img src="back.png" alt="PP"></div>
+        </div>
+    </div>
+    <div class="poker-card poker-card-select" id="card-2" data-id="2" data-value="1">
+        <div class="poker-card-inner">
+            <div class="poker-card-front"><img src="1.png" alt="1"></div>
+            <div class="poker-card-back"><img src="back.png" alt="PP"></div>
+        </div>
+    </div>
+    <div class="poker-card poker-card-select" id="card-3" data-id="3" data-value="2">
+        <div class="poker-card-inner">
+            <div class="poker-card-front"><img src="2.png" alt="2"></div>
+            <div class="poker-card-back"><img src="back.png" alt="PP"></div>
+        </div>
+    </div>
+    <div class="poker-card poker-card-select" id="card-4" data-id="4" data-value="3">
+        <div class="poker-card-inner">
+            <div class="poker-card-front"><img src="3.png" alt="3"></div>
+            <div class="poker-card-back"><img src="back.png" alt="PP"></div>
+        </div>
+    </div>
+    <div class="poker-card poker-card-select" id="card-5" data-id="5" data-value="5">
+        <div class="poker-card-inner">
+            <div class="poker-card-front"><img src="5.png" alt="5"></div>
+            <div class="poker-card-back"><img src="back.png" alt="PP"></div>
+        </div>
+    </div>
+    <div class="poker-card poker-card-select" id="card-6" data-id="6" data-value="8">
+        <div class="poker-card-inner">
+            <div class="poker-card-front"><img src="8.png" alt="8"></div>
+            <div class="poker-card-back"><img src="back.png" alt="PP"></div>
+        </div>
+    </div>
+    <div class="poker-card poker-card-select" id="card-7" data-id="7" data-value="13">
+        <div class="poker-card-inner">
+            <div class="poker-card-front"><img src="13.png" alt="13"></div>
+            <div class="poker-card-back"><img src="back.png" alt="PP"></div>
+        </div>
+    </div>
+    <div class="poker-card poker-card-select" id="card-8" data-id="8" data-value="20">
+        <div class="poker-card-inner">
+            <div class="poker-card-front"><img src="20.png" alt="20"></div>
+            <div class="poker-card-back"><img src="back.png" alt="PP"></div>
+        </div>
+    </div>
+    <div class="poker-card poker-card-select" id="card-9" data-id="9" data-value="40">
+        <div class="poker-card-inner">
+            <div class="poker-card-front"><img src="40.png" alt="40"></div>
+            <div class="poker-card-back"><img src="back.png" alt="PP"></div>
+        </div>
+    </div>
+    <div class="poker-card poker-card-select" id="card-10" data-id="10" data-value="100">
+        <div class="poker-card-inner">
+            <div class="poker-card-front"><img src="100.png" alt="100"></div>
+            <div class="poker-card-back"><img src="back.png" alt="PP"></div>
+        </div>
+    </div>
+    <div class="poker-card-spacer"></div>
+    <div class="poker-card poker-card-select" id="card-11" data-id="11" data-value="coffee">
+        <div class="poker-card-inner">
+            <div class="poker-card-front"><img src="coffee.png" alt="Coffee"></div>
+            <div class="poker-card-back"><img src="back.png" alt="PP"></div>
+        </div>
+    </div>
+    <div class="poker-card poker-card-select" id="card-12" data-id="12" data-value="infinite">
+        <div class="poker-card-inner">
+            <div class="poker-card-front"><img src="infinite.png" alt="Infinite"></div>
+            <div class="poker-card-back"><img src="back.png" alt="PP"></div>
+        </div>
+    </div>
+    <div class="poker-card poker-card-select" id="card-13" data-id="13" data-value="question">
+        <div class="poker-card-inner">
+            <div class="poker-card-front"><img src="question.png" alt="?"></div>
+            <div class="poker-card-back"><img src="back.png" alt="PP"></div>
+        </div>
+    </div>
+    <br>
+    <div>Hello <span id="name">???</span></div>
+    <div id="poker-control">
+        <button id="reset">Reset</button>
+        <button id="reveal">Reveal</button>
+        <span id="countdown"></span>
+    </div>
+</div>
+<div id="poker-right-panel">
+    <fieldset id="poker-result"><legend>Results</legend></fieldset>
+    <div id="poker-review"></div>
+</div>
+<script type="text/javascript" src="table.js"></script>
+</body>
+</head>
