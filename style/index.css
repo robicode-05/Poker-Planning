@@ -1,0 +1,68 @@
+body {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  background-color: lightgray;
+}
+
+main {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  flex-direction: column;
+  gap: 20px;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+fieldset input[type="radio"] {
+  display: none;
+}
+
+fieldset input[type="radio"] + label {
+  padding: 0.3rem 0.5rem;
+  border: 1px dashed gray;
+  border-radius: 6px;
+}
+
+fieldset input[type="radio"] + label:hover {
+  cursor: pointer;
+}
+
+fieldset input[type="radio"]:checked + label {
+  border: 1px solid black;
+}
+
+.group { display: flex; }
+.group button {
+  font-size: 1.5rem;
+  padding: 10px 16px;
+  border: 1px solid #4cae4c;
+  border-radius: 0 0.4rem 0.4rem 0;
+  color: white;
+  background-color: #5cb85c;
+  transition: background-color 300ms ease;
+}
+.group button:hover {
+  background-color: limegreen;
+  cursor: pointer;
+}
+
+.group input {
+  font-size: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem 0 0 0.4rem;
+  padding: 10px 16px;
+}
+
+.group input:focus-visible {
+  outline: transparent;
+  border-bottom: 2px solid grey;
+}

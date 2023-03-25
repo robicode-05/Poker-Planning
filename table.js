@@ -341,7 +341,8 @@ reveal.disabled = true;
 reset.addEventListener("click", ask_reset);
 reveal.addEventListener("click", ask_reveal);
 
-const userName = JSON.parse(localStorage.getItem("userName"));
+// const userName = JSON.parse(localStorage.getItem("userName"));
+const userName = localStorage.getItem("userName");
 const tableId = getParameterByName("table");
 
 if (null !== userName

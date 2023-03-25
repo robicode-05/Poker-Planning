@@ -39,7 +39,7 @@ document.querySelectorAll(".timeout").forEach((el) => {
     el.addEventListener('change', set_table);
 });
 
-let userName = JSON.parse(localStorage.getItem("userName"));
+let userName = localStorage.getItem("userName");
 if ("" !== userName) {
     nameInput.value = userName;
 }

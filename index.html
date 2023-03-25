@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-<title>Poker Planning</title>
-<link rel="author" href="https://github.com/Passific/Poker-Planning"/>
-<meta name="description" content="Poker-Planning">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css" type="text/css"/>
-</head>
-<body>
-<div class="container">
-    <div class="poker-planning"><img src="cards/back.svg" alt="PP"></div>
-    <div class="group">
-        <input id="name-input" value="" placeholder="What's your name?">
-        <input id="table-input" value="2" type="hidden" placeholder="What table do you want to join?">
-        <span class="btn-group"><button id="join">Join</button></span>
-    </div>
-    <br>
-    <span id="table-select">
-        Table:
-        <input type="radio" name="table" class="timeout" id="table-2" value="2"><label for="table-2">M1</label>
-        <input type="radio" name="table" class="timeout" id="table-3" value="3"><label for="table-3">M2</label>
-    </span>
-</div>
-<script type="text/javascript" src="script.js"></script>
-</body>
+  <head>
+    <title>Poker Planning</title>
+    <link rel="author" href="https://github.com/Passific/Poker-Planning"/>
+    <meta name="description" content="Poker-Planning">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css" type="text/css"/> -->
+    <link rel="stylesheet" href="./style/index.css" type="text/css"/>
+  </head>
+  <body>
+    <main>
+        <img src="cards/back.svg" alt="PP">
+        <div class="group">
+          <input value="" type="text" placeholder="What's your name?" autofocus onchange="saveUserName(event.target.value)" onkeydown="navigateToTablePageFromKey(event)">
+          <button onclick="navigateToTablePage()" >Join</button>
+        </div>
+
+        <fieldset id="table">
+          <span><legend><span>Table:</span></legend></span>
+          <input type="radio" name="table" id="table-2" value="2" oninput="setTable(event.target.value)">
+          <label for="table-2">M1</label>
+          <input type="radio" name="table" id="table-3" value="3"  oninput="setTable(event.target.value)">
+          <label for="table-3">M2</label>
+        </fieldset>
+    </main>
+
+    <script type="text/javascript" src="./scripts/index.js"></script>
+  </body>
 </head>
