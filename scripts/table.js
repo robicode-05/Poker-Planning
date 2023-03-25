@@ -1,4 +1,5 @@
 const cardsValues = ["0","1", "2", "3", "5", "8", "13", "20", "40", "100", "coffee", "infinite", "question"];
+let hasChoiceBeenMade = false;
 
 /***
  * Creating all cards into the DOM
@@ -15,6 +16,8 @@ function loadCards() {
 
     const label = document.createElement("label");
     label.setAttribute("for", `card-${index}`);
+    label.style.backgroundImage = `url('../cards/${value}.svg')`;
+    label.onclick = clickOnCard;
 
     cardContainer.appendChild(radioInput);
     cardContainer.appendChild(label);
@@ -24,3 +27,12 @@ function loadCards() {
 }
 
 loadCards();
+
+function clickOnCard() {
+  if(!hasChoiceBeenMade) {
+    document.querySelector(".poker-select").classList.add("selected");
+    hasChoiceBeenMade = !hasChoiceBeenMade;
+  }
+  console.log("CARD CLICK");
+}
+

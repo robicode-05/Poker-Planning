@@ -34,14 +34,47 @@ main {
   display: none;
 }
 
-.card input[type="radio"]:checked + label {
-  background-color: lightblue;
+.poker-select.selected .card input[type="radio"]:not(:checked):not(:hover) + label {
+  background-image: url("../cards/back.svg")!important;
+  transition-property: background-image;
+  transition-delay: 0.3s;
+  animation: flip;
+  animation-duration: 0.6s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes flip {
+  0% { transform: rotateY(0deg); }
+  50% { transform: rotateY(90deg); }
+  100% { transform: rotateY(0deg); }
+  
 }
 
 .card label {
+  position: relative;
   display: block;
   width: 100%;
   height: 100%;
   border-radius: 8px;
   background-color: lightgray;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.card label::after {
+  border-radius: inherit;
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.05s linear;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.card label:hover {
+  cursor: pointer;
+}
+.card label:hover::after {
+  opacity: 1;
 }
