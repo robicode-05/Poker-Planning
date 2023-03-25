@@ -1,0 +1,47 @@
+* { box-sizing: border-box; }
+
+body, main {
+  margin: 0;
+  min-height: 100dvh;
+}
+
+main {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  padding: 12px;
+}
+
+.poker-select {
+  --card-width: 122px;
+  --card-height: 187px;
+  --card-gap: 1rem;
+
+  width: calc(5 * (var(--card-width) + var(--card-gap))); 
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+  gap: var(--card-gap);
+}
+
+/* .poker-select.default .card label { background-color: red; } */
+
+.card {
+  width: var( --card-width);
+  height: var( --card-height);
+}
+.card input[type="radio"] {
+  display: none;
+}
+
+.card input[type="radio"]:checked + label {
+  background-color: lightblue;
+}
+
+.card label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background-color: lightgray;
+}
