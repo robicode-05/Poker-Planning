@@ -10,9 +10,9 @@ try
 	$bdd = new PDO($site_bdd, $site_bdd_user, $site_bdd_pass, $pdo_options);
 
 	// Create the data base for storing users
-//~ 	$Table=$site_bdd_prefix."users";
-//~ 	echo "Creating table: '$Table'...<br>";
-//~ 	$bdd->query("CREATE TABLE IF NOT EXISTS `".$site_bdd_name."`.".$Table." (`id` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, `user` VARCHAR(50) NOT NULL, UNIQUE(`user`), `password` VARCHAR(255) NOT NULL, `name` VARCHAR(50) NOT NULL, `mail` VARCHAR(255)) ENGINE = MYISAM;");
+ 	$Table=$site_bdd_prefix."users";
+ 	echo "Creating table: '$Table'...<br>";
+ 	$bdd->query("CREATE TABLE IF NOT EXISTS `".$site_bdd_name."`.".$Table." (`id` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, `user` VARCHAR(50) NOT NULL, UNIQUE(`user`), `password` VARCHAR(255) NOT NULL, `name` VARCHAR(50) NOT NULL, `mail` VARCHAR(255)) ENGINE = MYISAM;");
 
 	// Create the data base for tables
 	$Table=$site_bdd_prefix."tables";

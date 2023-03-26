@@ -44,6 +44,9 @@ main {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
+#card-1 + label {
+  background-image: url("../cards/1.svg");
+}
 
 @keyframes flip {
   0% { transform: rotateY(0deg); }

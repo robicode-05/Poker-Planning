@@ -5,7 +5,7 @@
 
 const CURRENT_VERSION = "0.5";
 
-const API_URL = "api.php?a=";
+const API_URL = "server/api.php?a=";
 
 const THRESHOLD_IN_FOCUS    = 1;
 const THRESHOLD_OUT_FOCUS   = 3;
@@ -207,7 +207,7 @@ function ask_reveal ()
     return api_fetch("reveal&t="+tableId);
 }
 
-function update_table ()
+function updateTable ()
 {
     if (counter >= threshold) {
         counter = 0;
@@ -300,11 +300,12 @@ function update_table ()
     else {
         counter++;
     }
+
 }
 
 function set_apiSource ()
 {
-    update_table(); // supercharge first refresh
+    updateTable(); // supercharge first refresh
     setInterval(update_table, 1000 /* 1s */);
     stopCountDown(); // will display timout select
 
